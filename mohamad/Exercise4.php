@@ -14,12 +14,6 @@ function calcBox($width, $height, $depth)
     return $ret_arr;
 };
 
-function minToHourConv($min)
-{
-    $hour = floor($min / 60);
-    $minutes = $min % 60;
-    return [$hour, $minutes];
-};
 
 $calcBox = calcBox(2, 6, 2);
 echo "The area of the box is: $calcBox[0] <br>";
