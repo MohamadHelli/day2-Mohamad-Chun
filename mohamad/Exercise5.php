@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-<?php    
+    <?php
 function calcBox($width, $height, $depth)
 {
     $ret_arr = [$width * $height, $width * $height * $depth];
@@ -21,9 +21,9 @@ function minToHourConv($min)
     return [$hour, $minutes];
 };
 
-$calcBox = calcBox(2, 6, 2);
-echo "The area of the box is: $calcBox[0] <br>";
-echo "The volume of the box is: $calcBox[1] <br>";
-?>
+$minGes = 200;
+$minToHourConv = minToHourConv($minGes);
+echo  "$minGes minutes = $minToHourConv[0] hour(s) and $minToHourConv[1] minute(s).";
+    ?>
 </body>
 </html>
