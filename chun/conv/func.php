@@ -26,24 +26,23 @@ function setValue($celsius)
     return $verb;
 }
 
-if (isset($_POST['submit'])) {
-    /*         if ($_POST["name"] || $_POST["age"]) {
-            echo "Welcome " . $_POST['name'] . "<br />";
-            echo "You are " . $_POST['age'] . " years old.";
-        } */
-
+if ($_POST) {
     if ($_POST['fahrenheit']) {
+
         $c_val = ($_POST['fahrenheit'] - 32) * 5 / 9;
         $verb = setValue($c_val);
 
-        echo "src = './img/$verb.png'";
+        // echo "src = './img/$verb.png'";
 
-        echo "<body>
-                <h1>Celsius</h1>
-                <div>
-                    It is $c_val degrees and it is $verb. <br>
-                    <img src='./img/$verb.jpg' alt='$verb'>
-                </div>
-            </body>";
+?>
+
+<body>
+    <h1>Celsius</h1>
+    <div>
+        It is <?= $c_val ?> degrees and it is $verb. <br>
+        <img src='./img/<?= $verb . ".jpg" ?>' alt='<?= $verb ?>'>
+    </div>
+</body>
+<?php
     }
 };
