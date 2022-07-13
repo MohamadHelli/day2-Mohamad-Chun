@@ -11,8 +11,10 @@
 <body>
     <p>Fahrenheit to Celsius Converter</p>
     <form action="func.php" method="POST">
-        Fahrenheit: <input type="number" name="fahrenheit" />
-        <input type="submit" name="submit" />
+        <div>Firstname: <input type="text" name="fname" /></div>
+        <div>Lastname: <input type="text" name="lname" /></div>
+        <div>age: <input type="number" name="age" /></div>
+        <input type="submit" name="submit" /></div>
     </form>
 </body>
 
